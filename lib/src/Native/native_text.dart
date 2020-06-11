@@ -1,11 +1,15 @@
 import 'package:flutter/services.dart';
 
-class NativeText{
+class NativeText {
   final _platform = MethodChannel('com.goandreus/native_text');
 
   Future<String> getText(String text) async {
-   String result = await _platform.invokeMethod('getText');
+    String result = await _platform.invokeMethod('get');
+    return result;
+  }
 
-   return result;
+  Future<String> addText(String text) async {
+    String result = await _platform.invokeMethod('add');
+    return result;
   }
 }
