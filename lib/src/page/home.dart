@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platforml/src/Native/native_text.dart';
+import 'package:platforml/src/native/native_text.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   var _text = '';
 
   _getText() async {
-    final text = await _nativeText.getText('Platform');
+    final text = await _nativeText.getText('native');
     setState(() {
       _text = text;
     });
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         child: Center(child: Text(_text)),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _getText(),
+        onPressed: _getText,
         child: Icon(Icons.add),
       ),
     );
