@@ -15,9 +15,13 @@ import Flutter
     channel.setMethodCallHandler({
         (call:FlutterMethodCall, result:FlutterResult) -> Void in
         
+        let arguments = call.arguments as? [String: Any]
+        
         switch call.method{
         case "get":
-            result("ios is here")
+            let age = arguments?["age"] as! Int
+            let dartText = arguments?["text"] as! String
+            result("ios is here: \(dartText) \(age)")
         case "add":
             result("ios add is here")
             

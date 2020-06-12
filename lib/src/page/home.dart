@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   var _text = '';
 
   _getText() async {
-    final text = await _nativeText.getText('native');
+    final text = await _nativeText.getText('Flutter -> dart');
     setState(() {
       _text = text;
     });
