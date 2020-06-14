@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   var _text = '';
 
   _getText() async {
-    final text = await _nativeText.getText('Flutter -> dart');
+    final text = await _nativeText.getText('Andres -> Edad:');
     setState(() {
       _text = text;
     });
@@ -23,6 +23,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Platform Channel'),
+      ),
       body: Container(
         child: Center(child: Text(_text)),
       ),
