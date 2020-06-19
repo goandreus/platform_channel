@@ -1,4 +1,4 @@
-# platforml
+# Platform Channel Dart to Swift / Swift to Dart
 
 A new Flutter project.
 
